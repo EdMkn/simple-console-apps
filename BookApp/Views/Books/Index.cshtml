@@ -1,0 +1,37 @@
+@model IEnumerable<BookApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Liste des livres";
+}
+
+<h1>📚 Liste des livres</h1>
+
+<a asp-action="Create" class="btn btn-primary">➕ Ajouter un livre</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Année</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var book in Model)
+{
+    <tr>
+        <td>@book.Title</td>
+        <td>@book.Author</td>
+        <td>@book.Year</td>
+        <td>
+            <a asp-action="Details" asp-route-id="@book.Id" class="btn btn-info btn-sm">👁️ Voir</a>
+            <a asp-action="Edit" asp-route-id="@book.Id" class="btn btn-warning btn-sm">✏️ Modifier</a>
+            <form asp-action="Delete" asp-route-id="@book.Id" method="post" class="d-inline">
+                <button class="btn btn-danger btn-sm" onclick="return confirm('Supprimer ce livre ?');">🗑️ Supprimer</button>
+            </form>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

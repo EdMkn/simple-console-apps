@@ -1,0 +1,17 @@
+@model BookApp.Models.Book
+
+@{
+    ViewData["Title"] = "Détails du livre";
+}
+
+<h1>📖 Détails du livre</h1>
+
+<div>
+    <strong>Titre :</strong> @Model.Title<br />
+    <strong>Auteur :</strong> @Model.Author<br />
+    <strong>Année :</strong> @Model.Year
+</div>
+
+<br />
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">✏️ Modifier</a>
+<a asp-action="Index" class="btn btn-secondary">↩️ Retour</a>
