@@ -1,0 +1,19 @@
+# 🔜 Ce qui reste à faire
+
+ 💾 Connexion à une base de données réelle (SQLite, PostgreSQL ou EF Core InMemory)
+
+ 🛡️ Validation des modèles avec des attributs comme [Required], [StringLength], etc.
+
+ 🔐 Ajout d’une authentification (JWT ou Identity)
+
+ 🌐 Support de CORS pour autoriser les appels depuis un frontend JS externe
+
+ 🔁 Utilisation d’un service de persistance (BookService) pour séparer la logique métier
+
+ 🧪 Ajout de tests unitaires pour les contrôleurs
+
+ 🧰 Utilisation de DataAnnotations dans Swagger
+
+ 🎨 Amélioration du style UI (via Bootstrap complet ou Tailwind)
+
+ 🧾 Documentation OpenAPI exportable (swagger.json)
